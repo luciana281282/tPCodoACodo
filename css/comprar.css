@@ -1,0 +1,141 @@
+:root {
+    --font-title: "Dancing Script", cursive;
+    --font-text: "Montserrat", sans-serif;
+ 
+    --font-size-title: 3rem;
+    --font-size-p: 1rem;
+    --font-size-medium: 1.15rem;
+    --font-size-h2: 2.5rem;
+ 
+    --color-shadow: rgba(135, 109, 91, 0.502);
+    --color-accent: rgb(1, 96, 29);
+    --color-brown-accent: rgb(141, 193, 154);
+ 
+    --font-color-accent: rgb(1, 96, 41);
+    --font-color-dark: rgb(30, 60, 37);
+    --font-color-light: rgb(246, 247, 246);
+ }
+ 
+ /*------------------MAIN------------------*/
+ 
+ .main {
+ 
+    width: 100%;
+    font-size: var(--font-size-p);
+    margin: auto;
+    padding-bottom: 4rem;
+ }
+ 
+ /*------------------INTRO------------------*/
+ .intro {
+    width: 100%;
+ 
+    height: 300px;
+   
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    box-sizing: border-box;
+ }
+ 
+
+ .intro-text {
+    color: var(--color-accent);
+    margin-top: 30px;
+    margin-right: 20vw;
+    padding: 6vw;
+    text-align: center;
+    position: relative;
+    max-width: 100%;
+    min-width: 390px;
+ }
+ 
+ .intro-text .h1 {
+    font-family: "Dancing Script", cursive;
+    font-size: var(--font-size-title);
+    line-height: 3.5rem;
+    padding-top: 1rem;
+    text-align: center;
+ }
+ 
+ .intro-text p {
+    font-family: var(--font-text);
+    color: var(--color-accent);
+    font-size: var(--font-size-medium);
+    line-height: 1.5rem;
+    padding-top: 1.5rem;
+    font-weight: 430;
+    text-align: center;
+ }
+ 
+ /*------------------FORMULARIO------------------*/
+
+ 
+ .formulario {
+    display: grid;
+    justify-content: right;
+    text-align: center;
+    height: max-content;
+    background-image: url("/img/puenteMujer.jpg");
+    background-size: cover;
+    background-position-y: center;
+    border-radius: 30px;
+    margin: 0 16%;
+    padding: 2rem;
+ }
+ 
+ .formulario select {
+    background-color: rgb(253, 251, 249);
+    box-shadow: inset 0px 0px 5px 2px var(--color-shadow);
+    padding: 10px 0;
+    border: 0;
+    margin: 0.5rem 0;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    max-width: 400px;
+    min-width: 60%;
+    align-items: center;
+ }
+ .select,
+ option {
+    text-align: center;
+    color: var(--color-accent);
+    font-size: 1rem;
+ }
+ 
+ .formulario level {
+    font-size: var(-font-size-nav-p);
+    color: var(--font-color-light);
+    font-weight: 600;
+    text-shadow: 0px 0px 10px var(--color-accent);
+ }
+ 
+ .btnComprar {
+    display: inline-block;
+    margin-left: 16%;
+    padding: 1rem 2rem;
+    background-color: var(--color-accent);
+    border-radius: 5px;
+    color: var(--font-color-light);
+    margin-top: 2rem;
+    transition: 300ms ease;
+ }
+ 
+ .btnComprar:hover {
+    background-color: var(--color-brown-accent);
+    color: var(--font-color-dark);
+    border: 1px solid var(--color-dark);
+    box-shadow: 1px 2px 2px var(--color-dark);
+ }
+ 
+ .btnComprar:active {
+    background-color: var(--color-dark);
+    color: var(--font-color-light);
+ }
+
+ 
+ @media screen and (min-width: 600px) {
+    .resultado {
+       height: 9rem;
+    }
+ }
+ 
