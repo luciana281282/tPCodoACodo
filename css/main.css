@@ -1,0 +1,343 @@
+/*===============Propiedades Globales================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+
+/*===================MENU==========================*/
+
+ #menu a{
+     font-size: 15px !important;
+     font-weight: 600;
+   
+    
+ }
+
+ #menu a{
+     color:#f8f8f8;
+     
+     
+ }
+
+ #menu{
+    background: #3f3f3f;
+}
+
+
+
+  .compra a{
+    color:chartreuse !important;
+
+ }
+
+
+
+#menu .logo{
+   text-align: left;
+}
+
+.menus  > .container-fluid{
+   text-align-last: right;
+}
+
+/*===================SLIDER DE IMAGENES==========================*/
+
+.carousel-inner {
+    max-height:39rem !important;
+}
+
+.contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: right;
+    color: #ffffff;
+
+}
+.texto-encima{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    right: 10px;
+    color: #ffffff;
+}
+.centrado{
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-40%, -60%);
+    color: #ffffff;
+    font-size:1rem;
+    text-align: right;
+}
+
+
+
+
+
+.btnImgC{
+    background: chartreuse;
+    color: azure;
+    border-radius: 0.5;
+    text-decoration: none;
+    margin-right: 4px;
+    font-size:1rem;
+    
+}
+.btnImgO{
+    background:darkgray;
+    color:#f3f3f3;
+    border-radius: 0.5;
+    text-decoration: none;
+    font-size:1rem;
+   
+}
+.btnImg{
+    font-size:1rem;
+}
+
+
+/*=================== ORADORES ==========================*/
+
+.oradores{
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+
+.btnOra{
+    font-size: 0,5rem !important;
+}
+
+
+
+/*===================SECCION LUGAR Y FECHA==========================*/
+
+
+.btnLYF{
+    background: none;
+    border-radius: 0.5;
+    margin-top: 14px;
+    color: #f3f3f3;
+}
+
+#local {
+    margin-top:50px;
+    background-color:#3f3f3f;
+    display:flex;
+    justify-content: center; 
+    padding: 2px;
+    margin-bottom: 20px;
+}
+
+
+
+
+.wrapper-local {
+    width:50%;
+    margin-left:20px;
+    margin-top: 3px;
+    color: #f3f3f3;
+    
+}
+
+#numeros-local{
+    margin:0 !important;
+    padding:0 !important;
+}
+#numeros-local div {
+    padding: 0 ;   
+    text-align:left;
+    height:48px;
+}
+
+#numeros-local div:not(:last-child) {
+    border-right: 2px solid #3f3f3f;
+  }
+#numeros-local div:not(:first-child) {
+    padding-left:20px;
+  }
+
+#numeros-local p{
+    margin:0;
+}
+
+
+
+/*========================= FORMULARIO================================*/
+
+
+.btnF{
+    background:rgb(0, 255, 115);
+    border-style: none;
+}
+
+.formu{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+
+/*=========================FOOTER================================*/
+
+footer {
+    background: #3f3f3f;
+    min-height: 50px;
+    text-align: center;
+}
+footer a{
+    color:#f3f3f3 !important;
+    text-align:center !important;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+footer .iconos{
+    align-items:flex;
+}
+
+
+/*=========================MEDIA QUERIES PANTALLA ANCHA================================*/
+
+@media (max-width:1200px){
+    #intro{
+        width:90% !important;
+        margin:auto;
+    }
+  
+    #local {
+        flex-wrap: wrap;
+        padding-top:30px;
+   }
+   .wrapper-local {
+    width:90%;
+    margin:auto;
+    padding-top:50px;    
+   }
+
+   .carousel-item  .centrado{
+  
+    top: 50%;
+    left: 60%;
+ 
+    font-size:1em;
+}
+.carousel-item .btnImg{
+    font: size 0.8em;
+}
+
+ 
+ 
+}
+/*=========================MEDIA QUERIES PANTALLA SM================================*/
+
+
+@media (max-width:768px) {
+
+    #intro{
+        width:90% !important;
+        margin:auto;
+    }
+
+    
+ 
+    .wrapper-local {
+        width:90%;
+        margin:auto;
+        padding-top:50px;    
+        margin-bottom: 10px;
+    }
+    #local {
+        flex-wrap:wrap;
+    }
+  
+    #bg-contactos{
+        top: -120px;
+    }
+
+    .carousel-item .centrado{
+        font-size: small !important;
+        top: 60%;
+        left:50%;
+    
+    }
+
+    .carousel-item .btnImg{
+        font-size:small;
+    }
+    #losOradores {
+       align-items: center;
+    }
+
+   
+}
+/*=========================MEDIA QUERIES PANTALLA EXTRA-SM================================*/
+
+@media (max-width: 576px) {
+    
+
+    .icono-wrap{
+        flex-wrap:wrap !important;
+        justify-content: center !important;
+        text-align: center;
+    }
+
+    .carousel-item .centrado{
+        font-size: 0.5em !important;
+        top: 60%;
+        left:50%;
+    
+    }
+    .carousel-item .btnImg{
+        font-size: 0.5rem;
+    }
+ 
+
+   
+    }
+
+
+
+/*=========================MEDIA QUERIES PANTALLA EXTRA-S================================*/
+
+@media (max-width: 320px) {
+
+    .carousel-item .centrado{
+        font-size:  0.4em !important;
+        top: 70%;
+        left:50%;
+    
+    }
+    .carousel-item .textoT{
+        font-size:  0.5em !important;
+       
+    
+    }
+    .carousel-item .btnImgO{
+        font-size: 0.4rem !important;
+        size: 0.4rem;
+    }
+
+    .carousel-item .btnImgC{
+        font-size: 0.4rem !important;
+        size: 0.4rem;
+    }
+    
+    body{
+        font-size: 0.5em;
+    }
+
+    *{
+        font-size: 0.5em;
+    }
+
+
+}
+    
+
