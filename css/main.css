@@ -67,10 +67,10 @@ body {
 .centrado{
     position: absolute;
     top: 50%;
-    left: 60%;
-    transform: translate(-40%, -60%);
+    left: 40%;
+    transform: translate(-30%, -30%);
     color: #ffffff;
-    font-size:1rem;
+    font-size:1em;
     text-align: right;
 }
 
@@ -84,7 +84,7 @@ body {
     border-radius: 0.5;
     text-decoration: none;
     margin-right: 4px;
-    font-size:1rem;
+    font-size:0.8rem;
     
 }
 .btnImgO{
@@ -92,7 +92,7 @@ body {
     color:#f3f3f3;
     border-radius: 0.5;
     text-decoration: none;
-    font-size:1rem;
+    font-size:0.8rem;
    
 }
 .btnImg{
@@ -110,6 +110,9 @@ body {
 }
 
 .btnOra{
+    color: black;
+}
+.btnSer{
     color: black;
 }
 
@@ -223,8 +226,8 @@ footer .iconos{
 
    .carousel-item  .centrado{
   
-    top: 50%;
-    left: 60%;
+    top: 40%;
+    left: 30%;
  
     font-size:1em;
 }
@@ -263,8 +266,8 @@ footer .iconos{
 
     .carousel-item .centrado{
         font-size: small !important;
-        top: 60%;
-        left:50%;
+        top: 30%;
+        left:40%;
     
     }
 
