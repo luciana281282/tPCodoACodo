@@ -24,16 +24,17 @@
     font-size: var(--font-size-p);
     margin: auto;
     padding-bottom: 4rem;
+    background: lightgreen;
  }
  
  /*------------------INTRO------------------*/
  .intro {
     width: 100%;
  
-    height: 300px;
+    
+    background: lightgreen;
    
-    padding-bottom: 2rem;
-    padding-top: 2rem;
+   
     box-sizing: border-box;
  }
  
@@ -41,7 +42,7 @@
  .intro-text {
     color: var(--color-accent);
     margin-top: 30px;
-    margin-right: 20vw;
+ 
     padding: 6vw;
     text-align: center;
     position: relative;
