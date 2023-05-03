@@ -76,7 +76,7 @@
     justify-content: right;
     text-align: center;
     height: max-content;
-    background-image: url("/img/puenteMujer.jpg");
+    background-image: url("../img/puenteMujer.jpg");
     background-size: cover;
     background-position-y: center;
     border-radius: 30px;
