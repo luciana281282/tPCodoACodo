@@ -185,6 +185,7 @@ body {
 .btnF{
     background:rgb(0, 255, 115);
     border-style: none;
+    width: 100%;
 }
 
 .formu{
@@ -213,6 +214,27 @@ footer .iconos{
     align-items:flex;
 }
 
+/*=========================SECCION COMPRA DE TICKETS================================*/
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+   
+    margin-bottom: 5px;
+  }
+
+.form-group select {
+    width: 230px; /* Define el ancho deseado */
+    height: 37px; /* Define la altura deseada */
+}
+
+.docu{
+    font-size: 1rem;
+}
 
 /*=========================MEDIA QUERIES PANTALLA ANCHA================================*/
 
