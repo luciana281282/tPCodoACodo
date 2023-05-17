@@ -64,7 +64,7 @@
            
             <div class="card border border-primary text-center" style="width: 15rem; height: 18rem;">
                 <div class="card-body">
-                  <h5 class="card-title p-3 fw-bold">Estudiante</h5>
+                  <h5 class="card-title p-3 fw-bold bg-primary">Estudiante</h5>
                   <h6 class="card-subtitle mb-2 text-muted p-3">Tiene un descuento</h6>
                   <h5 class="card-title p-3 fw-bold">80%</h5>
                   <p class="card-text p-3 docu">*Presentar documentacion</p>
@@ -80,7 +80,7 @@
 
             <div class="card border border-success text-center" style="width: 15rem;height: 18rem;">
                 <div class="card-body">
-                  <h5 class="card-title p-3 fw-bold">Trainee</h5>
+                  <h5 class="card-title p-3 fw-bold bg-success">Trainee</h5>
                   <h6 class="card-subtitle mb-2 text-muted p-3">Tiene un descuento</h6>
                   <h5 class="card-title p-3 fw-bold">50%</h5>
                   <p class="card-text p-3 docu">*Presentar documentacion</p>
@@ -94,7 +94,7 @@
 
             <div class="card border border-warning text-center" style="width: 15rem;height: 18rem;">
                 <div class="card-body">
-                  <h5 class="card-title p-3 fw-bold">Junior</h5>
+                  <h5 class="card-title p-3 fw-bold bg-warning">Junior</h5>
                   <h6 class="card-subtitle mb-2 text-muted p-3">Tiene un descuento</h6>
                   <h5 class="card-title p-3 fw-bold">15%</h5>
                   <p class="card-text p-3 docu">*Presentar documentacion</p>
@@ -127,20 +127,20 @@
     
          
     
-          <form id="miForm"  method="POST" data-netlify="true" action="#">     
+          <form id="miForm"  method="POST" data-netlify="true" action="tickets.html">     
 
 
             <div class="row " >   
      
                 <div class="col-lg-6 col-md-12 col-sm-12 d-flex justify-content-start  my-5 icono-wrap">
                 <div class="mb-1 form-group" >            
-                  <input type="text" class="form-control" id="name" name="name" placeholder="Nombre">
+                  <input type="text" class="form-control" id="nombre" name="name" placeholder="Nombre">
                 </div>
                 </div>
 
                 <div class="col-lg-6 col-md-12 col-sm-12 d-flex justify-content-start  my-5 icono-wrap">
                 <div class="mb-1 form-group" >            
-                    <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Apellido">
+                    <input type="text" class="form-control" id="apellido" name="lastname" placeholder="Apellido">
                   </div>
 
                 </div>
@@ -168,12 +168,13 @@
 
                  
             <div class="mb-1 form-group ">            
-                <tipo for="tipo"></tipo>
+             
                 <select name="tipo" id="tipo">
                 
                    <option class="select" value= 1 >Estudiante</option>
                    <option class="select" value= 2 >Trainee</option>
                    <option class="select" value= 3 >Junior</option>
+                   <option class="select" value= 4 >Sin categoria</option>
                
                 </select>
 
@@ -181,7 +182,7 @@
                   </div>
 
 
-              <h6 id ="pagar" class="bg-info p-3  "> Total a pagar:</h6>
+              <h6 id ="pagar" class=" bg-info p-3  "> Total a pagar:</h6>
     
               
 
@@ -189,15 +190,22 @@
      
                     
      
-                <div class="col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center my-5 icono-wrap">
+                <div class="col-lg-4 col-md-12 col-sm-12 d-flex justify-content-center my-5 icono-wrap">
 
                         <button id="botonB" type="button" class="btn btnF btn-lg btn-block">Borrar</button>
                 </div>
 
-                <div class="col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center  my-5 icono-wrap">   
+                <div class="col-lg-4 col-md-12 col-sm-12 d-flex justify-content-center  my-5 icono-wrap">   
 
-                        <button id="botonR" type="button" class="btn btnF btn-lg btn-block">Resumen</button>
+                  <button id="botonR" type="button" class="btn btnF btn-lg btn-block" onclick="mostrarBotonImprimir()">Resumen</button>
                 </div>
+
+                <div class="col-lg-4 col-md-12 col-sm-12 d-flex justify-content-center  my-5 icono-wrap">   
+
+                  <button id="botonI" type="button" class="btn btnF btn-lg btn-block" style="display: none;">Imprimir</button>
+             </div>
+
+             
 
 
 
