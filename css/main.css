@@ -236,6 +236,20 @@ footer .iconos{
     font-size: 1rem;
 }
 
+.contenedorQR {
+	display: flex;
+	justify-content: center;
+	padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.seccion{
+    margin-bottom: 40px;
+    
+}
+
+
+
 /*=========================IMPRIMIR================================*/
 
 @media print {

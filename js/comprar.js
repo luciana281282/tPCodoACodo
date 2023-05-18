@@ -1,10 +1,5 @@
-// al escuchar el click en el boton de resumen
-//escribir en total a pagar
 
-// if es estudiante valor * 0,2(x num entradas)
-// if es trainee valor * 0,5 (x num entradas)
-// if es junior Valor * 0,85 (x num entradas)
-
+/* -------DECLARACION DE VARIABLES Y CONSTANTES------- */
 
  const valorEntrada = 200;
  const descuentoEstudiante = 0.2;
@@ -13,16 +8,13 @@
  const botonBorrar = document.querySelector("#botonB");
  const botonResumen = document.querySelector("#botonR");
  const botonImprimir = document.querySelector("#botonI");
+ const botonQR = document.querySelector("#botonQR");
 let valorEstudiante = valorEntrada * descuentoEstudiante;
  let valorTrainee = valorEntrada * descuentoTrainee;
  let valorJunior = valorEntrada * descuentoJunior;
-// console.log(valorJunior);
 
-// onclick en borrar
- //  function limpiarFormulario() {
-  //  document.getElementById("miForm").reset();
-  //}
-  
+  /* ------VALIDAR FORMULARIO ------- */
+
   function validarFormulario() {
 
     var nombre = document.getElementById("nombre").value;
@@ -57,17 +49,6 @@ let valorEstudiante = valorEntrada * descuentoEstudiante;
   }
 
 
-
-
-
-
-
-
-  botonBorrar.addEventListener("click", function(){
-	document.getElementById("miForm").reset();
-  document.getElementById("pagar").innerHTML = 'Total a pagar :';
-    alert("Le has dado click en borrar");
-});
 
 /*botonResumen.addEventListener("click", function(){
     let presupuesto = 0;
@@ -107,7 +88,7 @@ let valorEstudiante = valorEntrada * descuentoEstudiante;
 
 
 
-
+  /* ------BOTON RESUMEN ------- */
 
 
 botonResumen.addEventListener("click", validarFormulario);
@@ -161,21 +142,7 @@ botonResumen.addEventListener("click", function(){
 
 
 
-  //onclick en resumen
-  //function resumen(cant, tipo){
-
-  // if tipo == estudiante{
-  //    poner en total a pagar cant * ValorEstudiante
- // }
-     // else if tipo == trainee{
-        // poner en total a pagar cant * ValorTrainee
-     //}
-  //else poner en total a pagar cant * ValorJunior
-//}
-
-
-
-
+  /* ------BOTON IMPRIMIR ------- */
 
 function imprimirTicket() {
   var nombre = document.getElementById("nombre").value;
@@ -217,7 +184,7 @@ function imprimirTicket() {
       <p><strong>Cantidad : </strong> ${cantidad}</p>
       <p><strong>Categoria : </strong> ${tipoCategoria}</p>
       <br>
-      <p> <strong>${total}  </strong></p>
+      <p> <strong>${total}</strong></p>
       <br>
       <br>
       <h2>Gracias por su Compra</h2>
@@ -274,12 +241,88 @@ botonImprimir.addEventListener("click", imprimirTicket);
 
 
 function mostrarBotonImprimir() {
-  var primerBoton = document.getElementById("botonR");
+  
   var segundoBoton = document.getElementById("botonI");
+  var segundoBoton2 = document.getElementById("botonQR");
 
-  // Ocultar primer botón
-  primerBoton.style.display = "none";
+
 
   // Mostrar segundo botón
   segundoBoton.style.display = "block";
+
+   // Mostrar segundo botón
+   segundoBoton2.style.display = "block";
+
 }
+
+  /* ------BOTON QR ------- */
+
+
+botonQR.addEventListener("click", validarFormulario);
+
+var form = document.getElementById("miForm");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault(); // Evitar el envío del formulario
+
+      var nombre = document.getElementById("nombre").value;
+      var cantidad = document.getElementById("cant").value;
+      
+      let tipo = document.getElementById("tipo");
+      let tipoEstu = tipo.options[tipo.selectedIndex].value;
+      let numeroEntero = parseInt(tipoEstu);
+      
+      
+      switch (numeroEntero) {
+      
+        case 1:
+            tipoCategoria = "Estudiante";
+          break;
+        case 2:
+           tipoCategoria = "Trainee";
+          break;
+        case 3:
+          tipoCategoria = "Junior";
+          break;
+          case 4:
+           tipoCategoria = "Sin categoria";
+          break;  
+      
+      }
+      var data = "Nombre: " + nombre + "\nCant: " + cantidad + "\nCategoria: " + tipoCategoria ;
+      
+
+      // Generar código QR
+      const qrVariable = new QRCode(form);
+      qrVariable.makeCode(data);
+
+      html2canvas(document.getElementById("contenedorQR")).then(function(canvas) {
+      var imageDataURI = canvas.toDataURL("image/png");
+      
+   
+      var pdf = new jsPDF();
+      pdf.addImage(imageDataURI, "PNG", 10, 10, 50, 50);
+      pdf.autoPrint(); // Hace que el PDF se imprima automáticamente al abrirlo
+      pdf.output("dataurlnewwindow"); // Abre el PDF en una nueva ventana para imprimirlo
+
+      qrVariable.clear();
+      
+    });
+   
+  });
+  
+   
+
+
+
+
+    /* ------BOTON BORRAR ------- */
+
+    botonBorrar.addEventListener("click", function(){
+      document.getElementById("miForm").reset();
+      document.getElementById("pagar").innerHTML = 'Total a pagar :';
+     
+        alert("Le has dado click en borrar");
+    });
+
+    
